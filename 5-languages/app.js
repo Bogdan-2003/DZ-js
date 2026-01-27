@@ -1,16 +1,15 @@
-let ru = "Привет!";
-let en = "Helloy!";
-let de = "Gutten tag!";
+const userLanguage = "hj";
 
-switch (de) {
-    case "Привет!":
-        console.log(ru)
+switch (userLanguage) {
+    case 'ru':
+        console.log("Привет!");
         break;
-    case "Helloy!":
-        console.log(en)
+    case 'en':
+        console.log("Hello!");
         break;
-    case "Gutten tag!":
-        console.log(de)
+    case 'de':
+        console.log("Gutten Tag!");
         break;
-    
+    default:
+        console.log("Hi");
 }
