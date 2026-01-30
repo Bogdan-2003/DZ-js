@@ -42,7 +42,7 @@ console.log(`я хочу купит ${budget > bmw ? 'BMW' : 'Welosiped'}`)*/
 
 
 
-const res = prompt("Сколько будет 7 + или - 15?");
+/*const res = prompt("Сколько будет 7 + или - 15?");
 switch (true) {
     case res === 'Я не робот':
     case Number(res) === 22:
@@ -54,4 +54,25 @@ switch (true) {
 }
 
 const a = 5;
-console.log(a > 6 ? a < 3 : a > 5)
+console.log(a > 6 ? a < 3 : a > 5)*/
+
+
+/*const isAdmin = false;
+const canWrite = true;
+
+console.log(`Системный файл ${isAdmin && canWrite}`); //и
+console.log(`Обычный файл ${isAdmin || canWrite}`); //или
+console.log(`Инвертируем права админа ${!isAdmin}`); //не not a*/
+
+const balance = 2200;
+const bonusBalance = 90;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
+
+const canBuy = (balance > 1000 || bonusBalance > 100) 
+    && !isBanned
+    && !isExist
+    && isSelling;
+
+console.log(`Могу купить игру: ${canBuy ? 'Да' : 'Нет'}`);
