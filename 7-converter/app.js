@@ -1,4 +1,4 @@
-function convert(amount, fromCurrency, tarСurrency) {
+function convert(amount, fromCurrency, toCurrency) {
     if (fromCurrency === 'руб' && toCurrency === '$') {
         return amount / 100;
   }
