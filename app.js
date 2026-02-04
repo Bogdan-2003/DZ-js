@@ -64,7 +64,7 @@ console.log(`Системный файл ${isAdmin && canWrite}`); //и
 console.log(`Обычный файл ${isAdmin || canWrite}`); //или
 console.log(`Инвертируем права админа ${!isAdmin}`); //не not a*/
 
-const balance = 2200;
+/*const balance = 2200;
 const bonusBalance = 90;
 const isBanned = false;
 const isExist = false;
@@ -75,4 +75,118 @@ const canBuy = (balance > 1000 || bonusBalance > 100)
     && !isExist
     && isSelling;
 
-console.log(`Могу купить игру: ${canBuy ? 'Да' : 'Нет'}`);
+console.log(`Могу купить игру: ${canBuy ? 'Да' : 'Нет'}`);*/
+
+/*function logName() {
+    console.log(`Мое имя Богдан`);
+} 
+ 
+logName();*/
+
+/*function logName(name, surname) {
+    console.log(`Мое имя ${name} ${surname}`);
+} 
+ 
+logName('Богдан', 'Кныш');
+
+function countDepositSum(depositInUSD, month, rate) {
+    const sum = depositInUSD * (1 + rate / 12) ** month;
+    return sum;
+}
+
+const example1 = countDepositSum(1000, 24, 0.12);
+console.log(example1)
+
+function powerOfTwo(num) {
+    return num * num;
+}
+console.log(powerOfTwo(5));
+
+const poft = function(num){
+    return num * num;
+}
+
+console.log(poft(6));
+
+
+const p = (now) => now * now;
+console.log(p(7));*/
+
+/*function toPower (num, power = 3) {
+    const res = num ** power;
+    return res;
+}
+
+console.log(toPower(2));
+
+const toPowerArrow = (num, power) => num ** power;
+console.log(toPowerArrow(2, 3));
+
+function canAccessWebsite (age) {
+    if (age < 18) {
+        return 'Нет';
+    } else {
+        return 'Да';
+    }
+}
+
+console.log(canAccessWebsite(18));
+
+const canAccessWebsite2 = age => age < 18 ? 'No': 'Yes';
+
+console.log(canAccessWebsite2(14));
+
+
+
+const KG_IN_USD = 7;
+const KM_IN_USD = 5;
+
+function calculateW(present) {
+    return present * KG_IN_USD;
+}
+
+function calculateKM (distance) {
+    return distance * KM_IN_USD;
+}
+
+/*function getExchagePrice(present1, present2, distance) {
+    const price1 = present1 * KG_IN_USD;
+    const price2 = present2 * KG_IN_USD;
+    const distancePrice = distance * KM_IN_USD;
+    return price1 + price2 + distancePrice;
+}
+console.log(getExchagePrice(1, 2, 10))*/
+
+/*function getExchagePrice(present1, present2, distance) {
+    const price1 = calculateW(present1);
+    const price2 = calculateW(present2);
+    const distancePrice = calculateKM(distance);
+    return price1 + price2 + distancePrice;
+}
+console.log(getExchagePrice(1, 2, 10)) */
+
+
+
+function computeCredit(age, hasJob = false) {
+    switch(true) {
+        case age > 24 && hasJob:
+            return 500;
+        case age > 24:
+            return 100;
+        default:
+            return 0;
+    }
+}
+
+function canBuy(productPrise, age, money, hasJob = false) {
+    const creditMoney = computeCredit(age, hasJob);
+    return productPrise <= money + creditMoney;
+}
+
+console.log(canBuy(2000, 25, 1900))
+
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+console.log(isEven(2));
