@@ -167,7 +167,7 @@ console.log(getExchagePrice(1, 2, 10)) */
 
 
 
-function computeCredit(age, hasJob = false) {
+/*function computeCredit(age, hasJob = false) {
     switch(true) {
         case age > 24 && hasJob:
             return 500;
@@ -189,4 +189,38 @@ function isEven(number) {
   return number % 2 === 0;
 }
 
-console.log(isEven(2));
+console.log(isEven(2));*/
+
+//массивы 
+/*const roles = ['admin', 'user', 'superuser'];
+console.log(roles);
+console.log(roles[1]);
+
+const users = ['Аня', 'Вика', 'Катя'];
+console.log(users);
+users[2] = 'Кристина';
+console.log(users)*/
+// push - добавляет массив в конец, pop - добавляет массив в перед users.push()
+// unshift - удаляе в концк, shift - удаляет в начале users.shift()
+
+ const roles = ['user', 'admin', 'manager'];
+
+ if (roles.includes('ad')) {
+    console.log('Доступ есть');
+ } else {
+    console.log('Дотупа нет!');
+ }
+
+ const roles2 = ['user', 'admin', 'manager', 'superuser'];
+
+ const res = roles2.slice(2,); //slice выбирает элементы от и да (2)-все элементы начиная со второго, (2, 4) начиная от второго заканчивая четвертым
+ console.log(roles2);
+ console.log(res);
+// splice - обрезает массив (1)
+
+const newRoles = ['sysandmin', 'developer'];
+const res2 = roles2.concat(newRoles);
+console.log(res2); // сщединяет роли конкатенация, reverse - переворачивает роли с переди на зад 
+
+
+
