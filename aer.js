@@ -90,3 +90,86 @@ for(let index in numbers2){
 }
 
 console.log(squares);
+
+const data = { name: 123, age: 'hbbh', active: 'true' };
+const rules = { name: 'string', age: 'number', active: 'boolean' };
+
+function validateAndConvert(data, rules) {
+  const result = {
+    valid: true,
+    converted: {}
+  };
+  for(let key in rules) {
+    let value = data[key];
+    let expectedType = rules[key];
+    if(expectedType === 'number'){
+      let num = Number(value);
+      if(!isNaN(num)) {
+        result.converted[key] = num;
+      }else {
+        result.valid = false;
+      }
+    }else if(expectedType === 'string') {
+      result.converted[key] = String(value);
+    }else if (expectedType === 'boolean') {
+      let boolValue;
+      if(value === true || value === 'true' || value === 1 || value === '1') {
+        boolValue = true;
+      }else if (value === false || value === 'false' || value === 0 || value === '0') {
+        boolValue = false;
+      }else {
+        result.valid = false;
+      }
+      if(boolValue !== undefined) {
+        result.converted[key] = boolValue;
+      }
+    }else {
+      result.valid = false;
+    }
+  }
+  return result;
+}
+console.log(validateAndConvert(data, rules));
+
+console.log('------------------------')
+
+/*const arr = ['hello', true, '42', 15, false];
+
+function solution(arr) {
+
+  for(let num of arr) {
+    if(typeof num === 'number') {
+      return num;
+    }else if(typeof num === 'string') {
+      let converted = Number(num);
+      if(!isNaN(converted)) {
+        return converted;
+      }
+    }
+  };
+  return null;
+};
+console.log(solution(arr));*/
+
+console.log('------------------------');
+
+const config = {timeout: '5000', enabled: 'true', name: 'MyApp', version: '1.0'};
+
+function solution(config) {
+  const result = {};
+  for(let key in config) {
+    const value = config[key];
+    if(value === 'true'){
+      result[key] = true;
+    }else if(value === 'false') {
+      result[key] = false;
+    }else if(/^-?\d+$/.test(value)) {
+      result[key] = Number(value);
+    }else {
+      result[key] = value;
+    }
+  }
+  return result;
+}
+
+console.log(solution(config));
