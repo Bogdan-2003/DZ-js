@@ -173,3 +173,24 @@ function solution(config) {
 }
 
 console.log(solution(config));
+
+
+
+
+
+const userName = 'Вася Пупкин';
+console.log(userName[0]);
+
+const userName = 'Вася aka Terminatot Perdinator Пупкин';
+const name = userName.slice(0, 4);
+const ferstName = userName.slice(31, 37);
+console.log(name, ferstName);
+
+
+const card = '2342834503458353';
+
+function formadCard(card) {
+  const sanitized = card.replace(/\D/g, '');
+  return sanitized.replace(/(\d{4})/g, '* ');
+}
+console.log(formadCard('card'));
